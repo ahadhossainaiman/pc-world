@@ -5,7 +5,7 @@ import Rating from 'react-rating';
 import ReactStars from "react-rating-stars-component";
 
 const Cart = ({product}) => {
-    // console.log(product.productName);
+    console.log(product);
     const firstExample = {
         size: 30,
         value: product.rating,
@@ -13,7 +13,7 @@ const Cart = ({product}) => {
       };
     return (
         <div  className='border-2 border-gray-300 p-3 relative rounded-md'>
-            <img src={product.image} alt="" className='w-[70%] bg-slate-100 mx-auto my-5' />
+            <img src={product.image.slice(1)} alt="product" className='w-[70%] bg-slate-100 mx-auto my-5' />
             <div>
                 <h1 className='text-black font-bold text-2xl'>{ product.productName.length>20?`${product.productName.slice(0,20)}...`:product.productName}</h1>
                 <p className='py-2'>{product.category}</p>

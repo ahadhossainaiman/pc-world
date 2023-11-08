@@ -1,11 +1,12 @@
 import RootLayouts from "@/components/Layouts/RootLayouts";
+import Featured from "@/components/Ui/Featured";
 import Cart from "@/components/Ui/cart";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const HomePage = ({ allProducts }) => {
-// console.log(allProducts);
+const HomePage = ({ allProducts, allCategory }) => {
+console.log(allProducts);
   return (
     <>
       <Head>
@@ -25,6 +26,7 @@ const HomePage = ({ allProducts }) => {
               <Cart key={product._id} product={product} />
           ))}
         </div>
+        <Featured  allCategory={allCategory}/>
       </div>
     </>
   );
@@ -43,12 +45,16 @@ export const getStaticProps = async () => {
     let j = Math.floor(Math.random() * (i + 1));
     [data[i], data[j]] = [data[j], data[i]];
   }
-  data.length = 6
+  data.length = 6;
+  const resFeature = await fetch('https://pcwhizbuilder-server.vercel.app/categories');
+  const feature = await resFeature.json();
+  console.log();
   return {
     props: {
       allProducts: data,
+      allCategory:feature
       
     },
-    // revalidate: 1,
+    revalidate: 1,
   };
 };
