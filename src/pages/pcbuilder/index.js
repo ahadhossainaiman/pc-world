@@ -1,5 +1,5 @@
 import RootLayouts from '@/components/Layouts/RootLayouts';
-import { resetCategories, setCategories } from '@/redux/features/pcBuilder/pcBuilderSlice';
+import { removeProduct, resetCategories, setCategories } from '@/redux/features/pcBuilder/pcBuilderSlice';
 import Link from 'next/link';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,7 +19,7 @@ const PcBuilderPage = ({categories}) => {
     return (
         <>
         <section>
-            <div className='max-w-[80%] mx-auto py-8 px-5'>
+            <div className='lg:max-w-[80%] mx-auto py-8 px-5'>
                 <p className='flex justify-center text-3xl font-bold text-black my-10'>Select Components</p>
                 <div className=''>
                     <table className='lg:w-1/2  mx-auto border-gray-200 border'>
@@ -31,7 +31,7 @@ const PcBuilderPage = ({categories}) => {
                   <td className="px-3 py-3">Actions</td>
                 </tr>
               </thead>
-                        <tbody>
+                        <tbody className='sm:w-[80%] sm:mx-auto'>
                             {
                                 itemCategories.map((item,index)=>{
                                     return <tr key={index} className='border-b-2'>

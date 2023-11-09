@@ -10,7 +10,7 @@ const FeaturesDetails = ({ featureCategory}) => {
     return (
         <div className='w-[80%] mx-auto'>
             <h1 className='text-3xl my-5 uppercase text-black flex justify-center font-medium'>{query.categoriesId}</h1>
-            <div className='grid grid-cols-3 gap-5 my-5'>
+            <div className='grid lg:grid-cols-3 gap-5 my-5'>
                 {
                     featureCategory.map((product,index)=>{
                         return <Cart key={index} product={product}/>

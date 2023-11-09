@@ -33,25 +33,25 @@ const Navber = () => {
               <a>Category</a>
               <ul className="p-2">
                 <li>
-                  <a>CPU / Processor</a>
+                <Link href={`/categories/cpu-processor`}>CPU / Processor</Link>
                 </li>
                 <li>
-                  <a>Motherboard</a>
+                <Link  href={`/categories/cpu-processor`}>Motherboard</Link>
                 </li>
                 <li>
-                  <a>RAM</a>
+                <Link  href={`/categories/ram`}>RAM</Link>
                 </li>
                 <li>
-                  <a>Power Supply Unit</a>
+                <Link href={`/categories/power-supply-unit`}>Power Supply Unit</Link>
                 </li>
                 <li>
-                  <a>Storage Device</a>
+                <Link href={`/categories/storage-device`}>Storage Device</Link>
                 </li>
                 <li>
-                  <a>Monitor</a>
+                <Link href={`/categories/monitor`}>Monitor</Link>
                 </li>
                 <li>
-                  <a>Others</a>
+                <Link href={`/categories/others`}>Others</Link>
                 </li>
               </ul>
             </li>
@@ -70,25 +70,25 @@ const Navber = () => {
               <summary>Category</summary>
               <ul className="p-2 w-[200%]">
               <li>
-                  <a>CPU / Processor</a>
+                  <Link href={`/categories/cpu-processor`}>CPU / Processor</Link>
                 </li>
                 <li>
-                  <a>Motherboard</a>
+                  <Link  href={`/categories/cpu-processor`}>Motherboard</Link>
                 </li>
                 <li>
-                  <a>RAM</a>
+                  <Link  href={`/categories/ram`}>RAM</Link>
                 </li>
                 <li>
-                  <a>Power Supply Unit</a>
+                  <Link href={`/categories/power-supply-unit`}>Power Supply Unit</Link>
                 </li>
                 <li>
-                  <a>Storage Device</a>
+                  <Link href={`/categories/storage-device`}>Storage Device</Link>
                 </li>
                 <li>
-                  <a>Monitor</a>
+                  <Link href={`/categories/monitor`}>Monitor</Link>
                 </li>
                 <li>
-                  <a>Others</a>
+                  <Link href={`/categories/others`}>Others</Link>
                 </li>
               </ul>
             </details>

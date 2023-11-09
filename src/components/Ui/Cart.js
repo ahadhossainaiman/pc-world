@@ -30,8 +30,8 @@ const Cart = ({product}) => {
         route.push('/pcbuilder')
       }
     return (
-        <div  className='border-2 border-gray-300 p-3 relative rounded-md'>
-            <img src={product.image.slice(1)} alt="product" className='w-[70%] bg-slate-100 mx-auto my-5' />
+        <div  className='border-2 flex-wrap border-gray-300 h-fit  p-3 relative rounded-md'>
+            <img src={product.image.slice(1)} alt="product" className='w-[70%] h-[70%] bg-slate-100 mx-auto my-5' />
             <div>
                 <h1 className='text-black font-bold text-2xl'>{ product.productName.length>20?`${product.productName.slice(0,20)}...`:product.productName}</h1>
                 <p className='py-2'>{product.category}</p>
