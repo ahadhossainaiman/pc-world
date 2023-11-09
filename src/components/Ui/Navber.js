@@ -97,7 +97,7 @@ const Navber = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-[#284399]">PC BUILDER</a>
+        <Link href="/pcbuilder" className="btn bg-[#284399]">PC BUILDER</Link>
       </div>
     </div>
   );
