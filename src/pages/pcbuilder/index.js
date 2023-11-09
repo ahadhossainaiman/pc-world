@@ -1,5 +1,5 @@
 import RootLayouts from '@/components/Layouts/RootLayouts';
-import { setCategories } from '@/redux/features/pcBuilder/pcBuilderSlice';
+import { resetCategories, setCategories } from '@/redux/features/pcBuilder/pcBuilderSlice';
 import Link from 'next/link';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,6 +11,11 @@ const PcBuilderPage = ({categories}) => {
     dispatch(setCategories({
         categories
     }))
+    const handleRemove = (path) => {
+        dispatch(removeProduct({
+          category: path
+        }))
+      }
     return (
         <>
         <section>
@@ -64,6 +69,39 @@ const PcBuilderPage = ({categories}) => {
                                 })
                             }
                         </tbody>
+                        <tfoot>
+                <tr style={{
+                  backgroundColor: "#e5e5e5"
+                }}>
+                  <td colSpan={2} className='text-right py-3 px-4'>
+                    <p className='font-bold'>Total Price:</p>
+                  </td>
+                  <td>
+                    {
+                      sum !== "" ? <p className='text-base text-center font-medium'>{sum} &#2547;</p> : <p className='bg-gray-200 py-1'></p>
+                    }
+                  </td>
+                  <td>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colSpan={4}>
+                    {
+                      fullFill > 5 ? <div className='py-4 px-4 flex justify-end'> <button onClick={() => {
+                        dispatch(
+                          resetCategories()
+                        )
+                        dispatch(setCategories({
+                          categories
+                        }))
+                        // toast.success("Congratulations! Your build has been completed successfully 🚀")
+                      }} className='bg-green-900 hover:bg-green-700 hover:scale-105 transition-all text-white border-0 py-2 px-5 text-base rounded-[4px] cursor-pointer w-fit'>Complete Build</button></div> :
+                        <div className='py-4 px-4 flex justify-end'> <button className='bg-gray-300 hover:bg-gray-300 transition-all text-slate-500 cursor-not-allowed border-0 py-2 px-5 text-base rounded-[4px] w-fit'>Complete Build</button></div>
+                    }
+                  </td>
+                </tr>
+              </tfoot>
                     </table>
                 </div>
             </div>
