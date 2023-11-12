@@ -1,7 +1,8 @@
 import RootLayouts from "@/components/Layouts/RootLayouts";
+import Cart from "@/components/Ui/Cart";
 import Featured from "@/components/Ui/Featured";
 import SliderComponent from "@/components/Ui/Slider";
-import Cart from "@/components/Ui/cart";
+
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 

@@ -111,7 +111,7 @@ const Navber = () => {
   {
     session &&  <button onClick={() => signOut(
    {
-    callbackUrl:"http://localhost:3000/"
+    callbackUrl:"https://pc-word-client.vercel.app/"
    }
     )} className=" mx-5 text-red-500">Sign Out</button>
   }
