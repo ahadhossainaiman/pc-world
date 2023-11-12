@@ -8,7 +8,7 @@
 
 <h5>Front End Live Site</h5>
 
-    link: 
+    link: https://pc-word-client.vercel.app/
 
 
 
