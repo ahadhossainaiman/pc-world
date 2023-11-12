@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br><h5>INSTALL</h5>
 
-## Getting Started
+    1. Clone the repositories.
+    2. Open the folder in cmd.
+    3. Run `npm i` or `npm install`.
+    4. Change env.text file to .env and set your own keys.
+    5. Run npm start.
 
-First, run the development server:
+<h5>Front End Live Site</h5>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+    link: 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<h5>Front End Code</h5>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    link: https://github.com/Programmer-Mehadi/pc-whiz-builder
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+<h5>Details & Features</h5>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    1. Homepage show 6 random components/products and all categories list.
+    2. Categories page show all products by categories name.
+    3. Pc builder page make a pc with various components. When select 6 or more products the "Complete Build" button will activate. And when click the button show a modal/alert.
+    4. The selected component will be store in Redux.
+    5. PC builder route and pc builder product both are private route(login user can access).
+    6. Also have a Login Page.
+    7. Use NextJS, NextAuth, Redux, TailwindCSS, Ant Design for frontend.
+    8. Use Express and MongoDB for backend.
