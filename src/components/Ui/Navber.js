@@ -1,7 +1,11 @@
+import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
 const Navber = () => {
+  const { data: session } = useSession();
+  console.log(session);
+
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10">
       <div className="navbar-start">
@@ -97,9 +101,21 @@ const Navber = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        {
+          session &&  <img src={session?.user?.image} className="w-10 h-10 rounded-full mx-5" alt="" />
+        }
+       
         <Link href="/pcbuilder" className="btn border-1 border-white text-white hover:border-blue-500">
   PC BUILDER
   </Link>
+  {
+    session &&  <button onClick={() => signOut(
+   {
+    callbackUrl:"http://localhost:3000/"
+   }
+    )} className=" mx-5 text-red-500">Sign Out</button>
+  }
+ 
       </div>
     </div>
   );
