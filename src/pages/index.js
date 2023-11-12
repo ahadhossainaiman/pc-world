@@ -1,8 +1,8 @@
 import RootLayouts from "@/components/Layouts/RootLayouts";
 import Featured from "@/components/Ui/Featured";
+import SliderComponent from "@/components/Ui/Slider";
 import Cart from "@/components/Ui/cart";
 import Head from "next/head";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const HomePage = ({ allProducts, allCategory }) => {
@@ -10,7 +10,7 @@ console.log(allProducts);
   return (
     <>
       <Head>
-        <title>PH-News Portal</title>
+        <title>PC-World BD</title>
         <meta
           name="description"
           content="This is news portal of programming hero made by next-js"
@@ -19,7 +19,7 @@ console.log(allProducts);
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        {/* <Slider/> */}
+        <SliderComponent/>
         <h1 className="text-5xl font-bold uppercase text-green-500 text-center py-10">Featured Products</h1>
         <div className="grid lg:grid-cols-3 gap-4 w-[80%] mx-auto my-10">
           {allProducts.map((product) => (

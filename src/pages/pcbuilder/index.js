@@ -22,10 +22,10 @@ const PcBuilderPage = ({categories}) => {
     return (
         <>
         <section>
-            <div className='lg:max-w-[80%] mx-auto py-8 px-5'>
+            <div className='lg:max-w-[70%] mx-auto py-8 px-5'>
                 <p className='flex justify-center text-3xl font-bold text-black my-10'>Select Components</p>
                 <div className=''>
-                    <table className='lg:w-1/2  mx-auto border-gray-200 border'>
+                    <table className='lg:w-1/2 mx-auto border-gray-200 border'>
                     <thead className='text-left text-xs md:text-base bg-gray-800 text-white'>
                 <tr>
                   <td className="px-6 py-3">Image</td>
@@ -34,7 +34,7 @@ const PcBuilderPage = ({categories}) => {
                   <td className="px-3 py-3">Actions</td>
                 </tr>
               </thead>
-                        <tbody className='sm:w-[80%] sm:mx-auto'>
+                        <tbody className='sm:w-[70%] sm:mx-auto'>
                             {
                                 itemCategories.map((item,index)=>{
                                     return <tr key={index} className='border-b-2'>
@@ -59,7 +59,7 @@ const PcBuilderPage = ({categories}) => {
                                         item.price !== "" ? <p className='text-sm'>{item.price} &#2547;</p> : <p className='bg-gray-200 py-1'></p>
                                       }
                                     </td>
-                                    <td class="px-6 py-3">
+                                    <td class="lg:px-6 sm:px-3 py-3">
                                       <div>
                                         {
                                           item?.productImage !== "" && item?.productName !== "" && item?.price !== "" ? <div onClick={() => handleRemove(item?.path)}> <button className='bg-red-900 hover:bg-red-700 hover:scale-105 transition-all text-white border-0 py-1 px-3 text-sm rounded-[4px] cursor-pointer'>X</button></div> : <Link href={`/pcbuilder/${item?.path}`}>

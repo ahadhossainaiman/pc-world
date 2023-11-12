@@ -97,7 +97,9 @@ const Navber = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link href="/pcbuilder" className="btn bg-[#284399]">PC BUILDER</Link>
+        <Link href="/pcbuilder" className="btn border-1 border-white text-white hover:border-blue-500">
+  PC BUILDER
+  </Link>
       </div>
     </div>
   );
